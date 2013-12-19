@@ -1,0 +1,529 @@
+/*!Jardineria Joseba 2014 */
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {
+    display: block;
+}
+
+html {
+    font-size: 100%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:hover,a:active {
+    outline: 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+blockquote {
+    margin: 1em 40px;
+}
+
+q {
+    quotes: none;
+}
+
+q:before,q:after {
+    content: '';
+    content: none;
+}
+
+small {
+    font-size: 75%;
+}
+
+ul,ol {
+    margin-left: 0;
+    padding: 0 0 0 40px;
+}
+
+ul li {
+    list-style-type: square;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+nav ul,nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+body {
+    background-color: #141414;
+    color: #848484;
+    font-family: 'Helvetica Neue',Helvetica,sans-serif;
+    font-size: .8em;
+    font-weight: 200;
+}
+
+h2,h3,h4 {
+    color: #F5F5F5;
+    font-family: 'Futura Bold','futura-pt','Helvetica Neue',Helvetica,sans-serif;
+    font-weight: 700;
+    margin: 0 0 1em 0;
+}
+
+h3 {
+    font-size: 3em;
+    margin: 0 0 1em 0;
+    text-align: center;
+}
+
+h4 {
+    color: #848484;
+    font-size: 2em;
+    font-weight: 200;
+    text-align: center;
+}
+
+b,strong {
+    font-weight: 500;
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+a:hover,a:active {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+header {
+    background: url('../images/header-01.jpg') no-repeat center center;
+    -moz-background-size: cover;
+    background-size: cover;
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/header-01.jpg',sizingMethod='scale')";
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/header-01.jpg',sizingMethod='scale');
+}
+
+header h1 {
+    height: 225px;
+    padding: 6%;
+    margin: 0;
+    width: 225px;
+}
+
+header h1 img {
+    background-color: rgba(0,0,0,0.4);
+}
+
+header h2 {
+    color: #FFF;
+    font-size: 7em;
+    font-weight: 700;
+    letter-spacing: -3px;
+    line-height: .8em;
+    padding: 6% 5% 10% 0;
+    margin: 0 auto;
+    max-width: 860px;
+    text-align: right;
+}
+
+section#what-we-build {
+    font-family: 'Futura Bold','FuturaBold','futura-pt','Helvetica Neue',Helvetica,sans-serif;
+    position: relative;
+    text-align: center;
+}
+
+section#what-we-build nav {
+    left: 45%;
+    position: absolute;
+    bottom: 30%;
+    z-index: 300;
+}
+
+section#what-we-build nav li {
+    float: left;
+}
+
+section#what-we-build nav li a {
+    background: url('../images/nav.png') no-repeat center 12px;
+    display: block;
+    height: 9px;
+    padding: 13px 10px;
+    text-indent: -9000px;
+    width: 9px;
+}
+
+section#what-we-build nav li a:hover,section#what-we-build.dokus nav li#nav-dokus a,section#what-we-build.kontribit nav li#nav-kontribit a,section#what-we-build.splitabill nav li#nav-splitabill a {
+    background-position: center -15px;
+}
+
+section#what-we-build div.project {
+    margin: 0 auto;
+    padding: 0 0 1%;
+}
+
+section#what-we-build div.project a {
+    display: block;
+}
+
+section#what-we-build img {
+    margin-top: -5%;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+}
+
+section#what-we-build h4 {
+    font-size: 2.8em;
+    font-weight: 600;
+    margin: 0;
+    padding: 0 4%;
+}
+
+section#what-we-build p {
+    font-size: 1.4em;
+    margin: 1% 0 3% 0;
+    padding: 0 6%;
+    position: relative;
+    z-index: 200;
+}
+
+section#what-we-build div#project-dokus {
+    background: #69B58A;
+}
+
+section#what-we-build div#project-dokus img {
+    max-width: 900px;
+}
+
+section#what-we-build div#project-dokus img:hover {
+}
+
+section#what-we-build div#project-dokus h4 {
+    color: #FFF;
+    margin-top: -4%;
+    text-shadow: 0 1px 2px #010101;
+}
+
+section#what-we-build div#project-dokus p {
+    color: #010101;
+    text-shadow: 0 1px 1px #3F9F6B;
+}
+
+section#what-we-build div#project-kontribit {
+    background: #F2F2F2;
+}
+
+section#what-we-build div#project-kontribit img {
+    margin: -2% 0 2%;
+    max-width: 747px;
+}
+
+section#what-we-build div#project-kontribit h4 {
+    color: #010101;
+    margin-top: -3%;
+    text-shadow: 0 1px 1px #E3E3E3;
+}
+
+section#what-we-build div#project-kontribit p {
+    color: #010101;
+    text-shadow: 0 1px 1px #E3E3E3;
+}
+
+section#what-we-build div#project-splitabill {
+    background: #6990AC;
+}
+
+section#what-we-build div#project-splitabill img {
+    margin: -2% 0 2%;
+    max-width: 375px;
+}
+
+section#what-we-build div#project-splitabill h4 {
+    color: #010101;
+    margin-top: -4%;
+    text-shadow: 0 1px 1px #999;
+}
+
+section#what-we-build div#project-splitabill p {
+    color: #FFF;
+    text-shadow: 0 1px 1px #010101;
+}
+
+section#clients {
+    max-width: 860px;
+    margin: 5% auto 8%;
+    padding: 0 5%;
+}
+
+section#clients p {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+section#clients h4:not(:first-child) {
+    margin-top: 5%;
+}
+
+section#clients ul {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 0;
+}
+
+section#clients ul li {
+    display: inline;
+    list-style: none;
+}
+
+section#clients ul li a {
+    background: url('../images/clients.png') no-repeat left top;
+    display: block;
+    float: left;
+    height: 73px;
+    margin-right: 20px;
+    opacity: .4;
+    text-indent: -9000px;
+    -webkit-transition: opacity .2s linear;
+    -moz-transition: opacity .2s linear;
+    -o-transition: opacity .2s linear;
+    transition: opacity .2s linear;
+}
+
+section#clients ul li.client-comoyo a {
+    width: 102px;
+}
+
+section#clients ul li.client-epla a {
+    background-position: -120px top;
+    width: 75px;
+}
+
+section#clients ul li.client-kf a {
+    background-position: -215px top;
+    width: 70px;
+}
+
+section#clients ul li.client-tf a {
+    background-position: -305px top;
+    margin-right: 0;
+    width: 64px;
+}
+
+section#clients ul li a:hover {
+    opacity: 1;
+    -webkit-transition: opacity .2s linear;
+    -moz-transition: opacity .2s linear;
+    -o-transition: opacity .2s linear;
+    transition: opacity .2s linear;
+}
+
+section#who-we-are {
+    margin: 0 auto;
+    max-width: 860px;
+    padding: 0 2%;
+    text-align: center;
+}
+
+section#who-we-are p.company-about {
+    color: #F5F5F5;
+    line-height: 1.5em;
+    font-size: 1.8em;
+    margin: 0 auto 2em;
+    max-width: 780px;
+    padding: 0 4%;
+}
+
+section#who-we-are div.persons {
+    float: left;
+    margin: 0 auto;
+    max-width: 430px;
+}
+
+section#who-we-are p.person {
+    float: left;
+    height: 300px;
+    margin: 0 15px 0 0;
+    text-align: left;
+    width: 200px;
+}
+
+section#who-we-are p.person img {
+    display: block;
+    height: 200px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+footer {
+    background-color: #000;
+    color: #DFD3D3;
+    text-align: center;
+    margin: 5% 0 0 0;
+    padding: 5% 2%;
+}
+
+footer a {
+    color: #C0C0C0;
+}
+
+footer p.contact {
+    color: #F5F5F5;
+    font-family: 'Futura Bold','futura-pt','Helvetica Neue',Helvetica,sans-serif;
+    font-size: 1.8em;
+}
+
+footer p.contact a {
+    color: #F5F5F5;
+}
+
+footer p.contact a.email {
+    margin-right: 12px;
+}
+
+footer p.info-organization {
+    line-height: 1.5em;
+}
+
+footer p.social {
+    margin: 3% auto;
+    max-width: 250px;
+}
+
+footer p.social a {
+    display: block;
+    float: left;
+    text-indent: -9000px;
+    -webkit-transition: opacity .2s linear;
+    -moz-transition: opacity .2s linear;
+    -o-transition: opacity .2s linear;
+    transition: opacity .2s linear;
+}
+
+footer p.social a.social-pinterest {
+    background: url('../media/images/pinterest_logo_red.png') no-repeat left top;
+    height: 50px;
+    width: 130px;
+    background-size: 100% 100%;
+    opacity: .8;
+}
+
+footer p.social a.social-facebook {
+    background: url('../media/images/facebook_t.png') no-repeat left top;
+    height: 30px;
+    width: 104px;
+    margin-top: 12px;
+    opacity: .6;
+}
+
+footer p.social a:hover {
+    opacity: 1;
+    -webkit-transition: opacity .2s linear;
+    -moz-transition: opacity .2s linear;
+    -o-transition: opacity .2s linear;
+    transition: opacity .2s linear;
+}
+
+.clear {
+    clear: both;
+}
+
+section.text {
+    color: #F5F5F5;
+    font-size: 1.2em;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+::selection {
+    background-color: rgba(255,255,255,0.9);
+    color: #010101;
+}
+
+::-moz-selection {
+    background-color: rgba(255,255,255,0.9);
+    color: #010101;
+}
+
+@media screen and (max-width:920px) {
+    header h1 img {
+        width: 55%;
+    }
+
+    header h2 {
+        font-size: 4em;
+        max-width: 560px;
+    }
+
+    section#who-we-are div.persons {
+        float: none;
+    }
+}
+
+@media screen and (max-width:480px) {
+    h3 {
+        font-size: 2em;
+    }
+
+    header h1 {
+        height: auto;
+        padding: 2%;
+        width: auto;
+    }
+
+    header h1 img {
+        width: 25%;
+    }
+
+    header h2 {
+        font-size: 3em;
+        max-width: 400px;
+    }
+
+    section#what-we-build h4 {
+        font-size: 2em;
+    }
+
+    section#what-we-build div#project-splitabill img {
+        max-width: 231px;
+    }
+
+    section#clients ul {
+        max-width: 220px;
+    }
+
+    section#clients h4 {
+        font-size: 1.5em;
+    }
+
+    section#clients ul li.client-kf a {
+        margin-right: 50px;
+    }
+
+    section#who-we-are p.company-about {
+        font-size: 1.3em;
+    }
+
+    section#who-we-are p.person {
+        float: none;
+        margin: 0 auto;
+    }
+}

@@ -23,20 +23,19 @@
 	<script>
 	$(function() {
 	    $('.navbar-collapse').bind('click', 'ul li a', function(event) {
-	    	//Ugly fix for closing the menu
-	    	$('.navbar-collapse').removeClass('in');
-	    	$('.navbar-collapse').addClass('collapse');
+	    	//Hide collapse when item selected
+	    	$(".navbar-collapse").collapse('hide');
 	    	var top = $(document).scrollTop();
 	    	var newTop = $(event.target.hash).offset().top;
 
 	    	//When headroom non active
 	    	//scrolling down
 	    	if(top<newTop){
-	    		$.scrollTo(event.target.hash, 1200);
+	    		$.scrollTo(event.target.hash, 1000);
 	    	}
 	    	//scrolling up
 	    	else{
-	    		$.scrollTo(event.target.hash, 1200, {offset:{left:0,top:-1*$('#mynav').height()}});
+	    		$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:-1*$('#mynav').height()}});
 	    	}
 	    	//When headroom non active
 	        //$.scrollTo(event.target.hash, 1200, {offset:{left:0,top:-1*$('#mynav').height()}});

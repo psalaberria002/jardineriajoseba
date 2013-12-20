@@ -17,6 +17,15 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/holder.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js"></script>
+<script>
+$(function() {
+    $('#mynav').bind('click', 'ul li a', function(event) {
+        $.scrollTo(event.target.hash, 1200);
+        return false;
+    });
+});
+</script>
 	
 
 	<!--Add google analitics script-->
@@ -26,7 +35,7 @@
 <!--body-->
 
 	<!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div id="mynav" class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -39,7 +48,8 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-          	<li class="active"><a href="#">Inicio</a></li>
+          	<li class="active"><a href="#top">Inicio</a></li>
+          	<li><a href="#carousel-example-generic">Galería</a></li>
           	<li><a href="#photos">Galería</a></li>
           	<li><a href="#services">Servicios</a></li>
             <li><a href="#about">Quiénes somos</a></li>
@@ -50,7 +60,7 @@
     </div>
 
 
-	<header>
+	<header id="top">
 
 		<h1>
 			<img src="media/images/logo.jpg" alt="Jardinería Joseba">
@@ -269,7 +279,7 @@
     <script  type="text/javascript"  src="js/headroom.min.js"></script>
    <script  type="text/javascript"  src="js/jQuery.headroom.js"></script>
     <script type="text/javascript">
-        $(".navbar-fixed-top").headroom();
+        //$(".navbar-fixed-top").headroom();
     </script>
 </body>
 </html>

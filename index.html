@@ -18,27 +18,33 @@
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/holder.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js"></script>
-<script>
-$(function() {
-    $('#mynav').bind('click', 'ul li a', function(event) {
-    	var top = $(document).scrollTop();
-    	var newTop = $(event.target.hash).offset().top;
 
-    	//When headroom non active
-    	//scrolling down
-    	if(top<newTop){
-    		$.scrollTo(event.target.hash, 1200);
-    	}
-    	//scrolling up
-    	else{
-    		$.scrollTo(event.target.hash, 1200, {offset:{left:0,top:-1*$('#mynav').height()}});
-    	}
-    	//When headroom non active
-        //$.scrollTo(event.target.hash, 1200, {offset:{left:0,top:-1*$('#mynav').height()}});
-        return false;
-    });
-});
-</script>
+	<!--Scroll to element event for navbar items-->
+	<script>
+	$(function() {
+	    $('.navbar-collapse').bind('click', 'ul li a', function(event) {
+	    	//Ugly fix for closing the menu
+	    	$('.navbar-collapse').removeClass('in');
+	    	$('.navbar-collapse').addClass('collapse');
+	    	var top = $(document).scrollTop();
+	    	var newTop = $(event.target.hash).offset().top;
+
+	    	//When headroom non active
+	    	//scrolling down
+	    	if(top<newTop){
+	    		$.scrollTo(event.target.hash, 1200);
+	    	}
+	    	//scrolling up
+	    	else{
+	    		$.scrollTo(event.target.hash, 1200, {offset:{left:0,top:-1*$('#mynav').height()}});
+	    	}
+	    	//When headroom non active
+	        //$.scrollTo(event.target.hash, 1200, {offset:{left:0,top:-1*$('#mynav').height()}});
+	        
+	        return false;
+	    });
+	});
+	</script>
 	
 
 	<!--Add google analitics script-->

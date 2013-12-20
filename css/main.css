@@ -144,24 +144,24 @@ header h2 {
     text-align: right;
 }
 
-section#what-we-build {
+section#photos {
     font-family: 'Futura Bold','FuturaBold','futura-pt','Helvetica Neue',Helvetica,sans-serif;
     position: relative;
     text-align: center;
 }
 
-section#what-we-build nav {
+section#photos nav {
     left: 45%;
     position: absolute;
     bottom: 30%;
     z-index: 300;
 }
 
-section#what-we-build nav li {
+section#photos nav li {
     float: left;
 }
 
-section#what-we-build nav li a {
+section#photos nav li a {
     background: url('../images/nav.png') no-repeat center 12px;
     display: block;
     height: 9px;
@@ -170,34 +170,34 @@ section#what-we-build nav li a {
     width: 9px;
 }
 
-section#what-we-build nav li a:hover,section#what-we-build.dokus nav li#nav-dokus a,section#what-we-build.kontribit nav li#nav-kontribit a,section#what-we-build.splitabill nav li#nav-splitabill a {
+section#photos nav li a:hover,section#photos.dokus nav li#nav-dokus a,section#photos.kontribit nav li#nav-kontribit a,section#photos.splitabill nav li#nav-splitabill a {
     background-position: center -15px;
 }
 
-section#what-we-build div.project {
+section#photos div.project {
     margin: 0 auto;
     padding: 0 0 1%;
 }
 
-section#what-we-build div.project a {
+section#photos div.project a {
     display: block;
 }
 
-section#what-we-build img {
+section#photos img {
     margin-top: -5%;
     position: relative;
     width: 100%;
     z-index: 100;
 }
 
-section#what-we-build h4 {
+section#photos h4 {
     font-size: 2.8em;
     font-weight: 600;
     margin: 0;
     padding: 0 4%;
 }
 
-section#what-we-build p {
+section#photos p {
     font-size: 1.4em;
     margin: 1% 0 3% 0;
     padding: 0 6%;
@@ -205,96 +205,96 @@ section#what-we-build p {
     z-index: 200;
 }
 
-section#what-we-build div#project-dokus {
+section#photos div#project-dokus {
     background: #69B58A;
 }
 
-section#what-we-build div#project-dokus img {
+section#photos div#project-dokus img {
     max-width: 900px;
 }
 
-section#what-we-build div#project-dokus img:hover {
+section#photos div#project-dokus img:hover {
 }
 
-section#what-we-build div#project-dokus h4 {
+section#photos div#project-dokus h4 {
     color: #FFF;
     margin-top: -4%;
     text-shadow: 0 1px 2px #010101;
 }
 
-section#what-we-build div#project-dokus p {
+section#photos div#project-dokus p {
     color: #010101;
     text-shadow: 0 1px 1px #3F9F6B;
 }
 
-section#what-we-build div#project-kontribit {
+section#photos div#project-kontribit {
     background: #F2F2F2;
 }
 
-section#what-we-build div#project-kontribit img {
+section#photos div#project-kontribit img {
     margin: -2% 0 2%;
     max-width: 747px;
 }
 
-section#what-we-build div#project-kontribit h4 {
+section#photos div#project-kontribit h4 {
     color: #010101;
     margin-top: -3%;
     text-shadow: 0 1px 1px #E3E3E3;
 }
 
-section#what-we-build div#project-kontribit p {
+section#photos div#project-kontribit p {
     color: #010101;
     text-shadow: 0 1px 1px #E3E3E3;
 }
 
-section#what-we-build div#project-splitabill {
+section#photos div#project-splitabill {
     background: #6990AC;
 }
 
-section#what-we-build div#project-splitabill img {
+section#photos div#project-splitabill img {
     margin: -2% 0 2%;
     max-width: 375px;
 }
 
-section#what-we-build div#project-splitabill h4 {
+section#photos div#project-splitabill h4 {
     color: #010101;
     margin-top: -4%;
     text-shadow: 0 1px 1px #999;
 }
 
-section#what-we-build div#project-splitabill p {
+section#photos div#project-splitabill p {
     color: #FFF;
     text-shadow: 0 1px 1px #010101;
 }
 
-section#clients {
+section#services {
     max-width: 860px;
     margin: 5% auto 8%;
     padding: 0 5%;
 }
 
-section#clients p {
+section#services p {
     font-size: 1.2em;
     text-align: center;
 }
 
-section#clients h4:not(:first-child) {
+section#services h4:not(:first-child) {
     margin-top: 5%;
 }
 
-section#clients ul {
+section#services ul {
     margin: 0 auto;
     max-width: 400px;
     padding: 0;
 }
 
-section#clients ul li {
+section#services ul li {
     display: inline;
     list-style: none;
 }
 
-section#clients ul li a {
-    background: url('../images/clients.png') no-repeat left top;
+section#services ul li a {
+    background: url('../images/services.png') no-repeat left top;
     display: block;
     float: left;
     height: 73px;
@@ -307,27 +307,27 @@ section#clients ul li a {
     transition: opacity .2s linear;
 }
 
-section#clients ul li.client-comoyo a {
+section#services ul li.client-comoyo a {
     width: 102px;
 }
 
-section#clients ul li.client-epla a {
+section#services ul li.client-epla a {
     background-position: -120px top;
     width: 75px;
 }
 
-section#clients ul li.client-kf a {
+section#services ul li.client-kf a {
     background-position: -215px top;
     width: 70px;
 }
 
-section#clients ul li.client-tf a {
+section#services ul li.client-tf a {
     background-position: -305px top;
     margin-right: 0;
     width: 64px;
 }
 
-section#clients ul li a:hover {
+section#services ul li a:hover {
     opacity: 1;
     -webkit-transition: opacity .2s linear;
     -moz-transition: opacity .2s linear;
@@ -335,14 +335,14 @@ section#clients ul li a:hover {
     transition: opacity .2s linear;
 }
 
-section#who-we-are {
+section#about {
     margin: 0 auto;
     max-width: 860px;
     padding: 0 2%;
     text-align: center;
 }
 
-section#who-we-are p.company-about {
+section#about p.company-about {
     color: #F5F5F5;
     line-height: 1.5em;
     font-size: 1.8em;
@@ -351,13 +351,13 @@ section#who-we-are p.company-about {
     padding: 0 4%;
 }
 
-section#who-we-are div.persons {
+section#about div.persons {
     float: left;
     margin: 0 auto;
     max-width: 430px;
 }
 
-section#who-we-are p.person {
+section#about p.person {
     float: left;
     height: 300px;
     margin: 0 15px 0 0;
@@ -365,7 +365,7 @@ section#who-we-are p.person {
     width: 200px;
 }
 
-section#who-we-are p.person img {
+section#about p.person img {
     display: block;
     height: 200px;
     margin-bottom: 10px;
@@ -453,6 +453,10 @@ section.text {
     padding: 0 2%;
 }
 
+.navbar-default .navbar-nav > li:hover {
+    background-color: #777777;
+}
+
 ::selection {
     background-color: rgba(255,255,255,0.9);
     color: #010101;
@@ -473,7 +477,7 @@ section.text {
         max-width: 560px;
     }
 
-    section#who-we-are div.persons {
+    section#about div.persons {
         float: none;
     }
 }
@@ -498,31 +502,31 @@ section.text {
         max-width: 400px;
     }
 
-    section#what-we-build h4 {
+    section#photos h4 {
         font-size: 2em;
     }
 
-    section#what-we-build div#project-splitabill img {
+    section#photos div#project-splitabill img {
         max-width: 231px;
     }
 
-    section#clients ul {
+    section#services ul {
         max-width: 220px;
     }
 
-    section#clients h4 {
+    section#services h4 {
         font-size: 1.5em;
     }
 
-    section#clients ul li.client-kf a {
+    section#services ul li.client-kf a {
         margin-right: 50px;
     }
 
-    section#who-we-are p.company-about {
+    section#about p.company-about {
         font-size: 1.3em;
     }
 
-    section#who-we-are p.person {
+    section#about p.person {
         float: none;
         margin: 0 auto;
     }

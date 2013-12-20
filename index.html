@@ -21,7 +21,19 @@
 <script>
 $(function() {
     $('#mynav').bind('click', 'ul li a', function(event) {
-        $.scrollTo(event.target.hash, 1200);
+    	var top = $(document).scrollTop();
+    	var newTop = $(event.target.hash).offset().top;
+    	alert(top+' '+newTop);
+    	//scrolling down
+    	if(top<newTop){
+    		$.scrollTo(event.target.hash, 1200);
+    	}
+    	//scrolling up
+    	else{
+    		$.scrollTo(event.target.hash, 1200, {offset:{left:0,top:-1*$('#mynav').height()}});
+    	}
+        //$.scrollTo(event.target.hash, 1200, {offset:{left:0,top:-1*$('#mynav').height()}});
+        //$.scrollTo(event.target.hash, 1200);//When headroom active
         return false;
     });
 });
@@ -31,7 +43,7 @@ $(function() {
 	<!--Add google analitics script-->
 </head>
 <!--Bootstrap SpyScroll-->
-<body data-spy="scroll" data-target=".navbar-fixed-top">
+<body data-spy="scroll" data-offset="50" data-target=".navbar-fixed-top">
 <!--body-->
 
 	<!-- Fixed navbar -->
@@ -279,7 +291,7 @@ $(function() {
     <script  type="text/javascript"  src="js/headroom.min.js"></script>
    <script  type="text/javascript"  src="js/jQuery.headroom.js"></script>
     <script type="text/javascript">
-        //$(".navbar-fixed-top").headroom();
+        $(".navbar-fixed-top").headroom();
     </script>
 </body>
 </html>

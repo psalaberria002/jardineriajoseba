@@ -115,11 +115,11 @@ a:hover,a:active {
 }
 
 header {
-    background: url('../images/header-01.jpg') no-repeat center center;
+    background: url('../media/images/header.jpg') no-repeat center center;
     -moz-background-size: cover;
     background-size: cover;
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/header-01.jpg',sizingMethod='scale')";
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/header-01.jpg',sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../media/images/header.jpg',sizingMethod='scale')";
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../media/images/header.jpg',sizingMethod='scale');
 }
 
 header h1 {
@@ -204,23 +204,6 @@ section#photos nav {
     z-index: 300;
 }
 
-section#photos nav li {
-    float: left;
-}
-
-section#photos nav li a {
-    background: url('../images/nav.png') no-repeat center 12px;
-    display: block;
-    height: 9px;
-    padding: 13px 10px;
-    text-indent: -9000px;
-    width: 9px;
-}
-
-section#photos nav li a:hover,section#photos.dokus nav li#nav-dokus a,section#photos.kontribit nav li#nav-kontribit a,section#photos.splitabill nav li#nav-splitabill a {
-    background-position: center -15px;
-}
-
 section#photos div.project {
     margin: 0 auto;
     padding: 0 0 1%;
@@ -235,6 +218,7 @@ section#photos img {
     position: relative;
     width: 100%;
     z-index: 100;
+    margin:  auto;
 }
 
 section#photos h4 {
@@ -252,64 +236,67 @@ section#photos p {
     z-index: 200;
 }
 
-section#photos div#project-dokus {
+section#photos div#project-one {
     background: #69B58A;
     padding: 5% 2%;
 }
 
-section#photos div#project-dokus img {
+section#photos div#project-one img {
     max-width: 900px;
 }
 
-section#photos div#project-dokus img:hover {
+section#photos div#project-one img:hover {
 }
 
-section#photos div#project-dokus h4 {
+section#photos div#project-one h4 {
     color: #FFF;
     text-shadow: 0 1px 2px #010101;
 }
 
-section#photos div#project-dokus p {
+section#photos div#project-one p {
     color: #010101;
     text-shadow: 0 1px 1px #3F9F6B;
 }
 
-section#photos div#project-kontribit {
+section#photos div#project-two {
     background: #F2F2F2;
+    margin: 0 auto;
 }
 
-section#photos div#project-kontribit img {
-    margin: -2% 0 2%;
+section#photos div#project-two img {
+    /* margin: -2% 0 2%; */
     max-width: 747px;
+    margin: 0 auto;
+    padding-top:  5%;
 }
 
-section#photos div#project-kontribit h4 {
+section#photos div#project-two h4 {
     color: #010101;
     margin-top: -3%;
     text-shadow: 0 1px 1px #E3E3E3;
 }
 
-section#photos div#project-kontribit p {
+section#photos div#project-two p {
     color: #010101;
     text-shadow: 0 1px 1px #E3E3E3;
 }
 
-section#photos div#project-splitabill {
+section#photos div#project-three {
     background: #6990AC;
 }
 
-section#photos div#project-splitabill img {
+section#photos div#project-three img {
     margin: -2% 0 2%;
     max-width: 375px;
 }
 
-section#photos div#project-splitabill h4 {
+section#photos div#project-three h4 {
     color: #010101;
     margin-top: -4%;
     text-shadow: 0 1px 1px #999;
 }
 
-section#photos div#project-splitabill p {
+section#photos div#project-three p {
     color: #FFF;
     text-shadow: 0 1px 1px #010101;
 }
@@ -325,59 +312,6 @@ section#services p {
 
 section#services h4:not(:first-child) {
     margin-top: 5%;
-}
-
-section#services ul {
-    margin: 0 auto;
-    max-width: 400px;
-    padding: 0;
-}
-
-section#services ul li {
-    display: inline;
-    list-style: none;
-}
-
-section#services ul li a {
-    background: url('../images/services.png') no-repeat left top;
-    display: block;
-    float: left;
-    height: 73px;
-    margin-right: 20px;
-    opacity: .4;
-    text-indent: -9000px;
-    -webkit-transition: opacity .2s linear;
-    -moz-transition: opacity .2s linear;
-    -o-transition: opacity .2s linear;
-    transition: opacity .2s linear;
-}
-
-section#services ul li.client-comoyo a {
-    width: 102px;
-}
-
-section#services ul li.client-epla a {
-    background-position: -120px top;
-    width: 75px;
-}
-
-section#services ul li.client-kf a {
-    background-position: -215px top;
-    width: 70px;
-}
-
-section#services ul li.client-tf a {
-    background-position: -305px top;
-    margin-right: 0;
-    width: 64px;
-}
-
-section#services ul li a:hover {
-    opacity: 1;
-    -webkit-transition: opacity .2s linear;
-    -moz-transition: opacity .2s linear;
-    -o-transition: opacity .2s linear;
-    transition: opacity .2s linear;
 }
 
 section#about {
@@ -494,10 +428,6 @@ section.text {
     padding: 0 2%;
 }
 
-.navbar-default .navbar-nav > li:hover {
-    background-color: #777777;
-}
-
 ::selection {
     background-color: rgba(255,255,255,0.9);
     color: #010101;
@@ -543,7 +473,7 @@ section.text {
         font-size: 2em;
     }
 
-    section#photos div#project-splitabill img {
+    section#photos div#project-three img {
         max-width: 231px;
     }
 
@@ -553,10 +483,6 @@ section.text {
 
     section#services h4 {
         font-size: 1.5em;
-    }
-
-    section#services ul li.client-kf a {
-        margin-right: 50px;
     }
 
     section#about p.company-about {

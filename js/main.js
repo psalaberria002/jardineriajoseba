@@ -20,6 +20,7 @@ $(document).ready(function(){
 			});
 		}
 		
+		//Add click event for nav bar items
 	    $('.navbar-collapse').bind('click', 'ul li a', function(event) {
 	    	event.preventDefault();
 	 		//When the collape is open, the class 'in' is set 
@@ -47,4 +48,20 @@ $(document).ready(function(){
 	    	}
 	        
 	    });
-	});
+
+	    //Add click event for navbar brand item
+	    $('.navbar-brand').bind('click', function(event){
+	    	event.preventDefault();
+	    	$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:(-1*$('.navbar-header').height())+1}});
+	    });
+});
+
+
+//Window resize event is called many times in some browsers. This is a workaround for calling a function just once, instead of many times.
+var fid; 
+$(window).resize(function() 
+{
+    clearTimeout(fid);
+    //Refresh scrollspy
+    id = setTimeout(function(){$('[data-spy="scroll"]').each(function () {console.log('refresh');var $spy = $(this).scrollspy('refresh')})}, 500);
+});

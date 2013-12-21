@@ -18,11 +18,16 @@
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/holder.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js"></script>
+	<script  type="text/javascript"  src="js/headroom.min.js"></script>
+    <script  type="text/javascript"  src="js/jQuery.headroom.js"></script>
 
 	<!--Scroll to element event for navbar items-->
 	<script>
-	$(function() {
+	$(document).ready(function(){
+		$(".navbar-fixed-top").headroom();
+		
 	    $('.navbar-collapse').bind('click', 'ul li a', function(event) {
+	    	event.preventDefault();
 	    	//Hide collapse when item selected
 	    	$(".navbar-collapse").collapse('hide');
 	    	var top = $(document).scrollTop();
@@ -31,20 +36,30 @@
 	    	//When headroom non active
 	    	//scrolling down
 	    	if(top<newTop){
+	    		console.log('DOWN'+event.target.hash+' '+top+' '+newTop);
 	    		$.scrollTo(event.target.hash, 1000);
 	    	}
 	    	//scrolling up
 	    	else{
-	    		$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:-1*$('#mynav').height()}});
+	    		console.log('UP'+event.target.hash+' '+top+' '+newTop);
+	    		console.log((-1*$('#mynav').height())+1);
+	    		$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:(-1*$('.navbar-header').height())+1}});
 	    	}
 	    	//When headroom non active
 	        //$.scrollTo(event.target.hash, 1200, {offset:{left:0,top:-1*$('#mynav').height()}});
 	        
-	        return false;
+	        //return false;
 	    });
+	    //Refresh scrollspy
+		// $('[data-spy="scroll"]').each(function () {
+		// 	var $spy = $(this).scrollspy('refresh');
+		// });
 	});
 	</script>
 	
+    <script type="text/javascript">
+        $(".navbar-fixed-top").headroom();
+    </script>
 
 	<!--Add google analitics script-->
 </head>
@@ -221,7 +236,7 @@
 	<section id="about">
 
 		<h3>
-			Who we are
+			Quiénes somos
 		</h3>
 
 		<p class="company-about">
@@ -264,25 +279,24 @@
 		</h3>
 
 		<p class="contact">
-			<a href="mailto:jardineria_joseba&#64;hotmail.es" class="email">jardineria_joseba&#64;hotmail.es</a>
+			<a href="mailto:jardineria_joseba&#64;hotmail.es" target="_blank" class="email">jardineria_joseba&#64;hotmail.es</a>
 
 			<a href="tel:+34 689 915 410" class="tel">+34&nbsp;689&nbsp;915&nbsp;410</a>
 		</p>
 
 		<p class="info-organization">
-			<a href="http://funkbit.no/" class="fn org url">Jardinería Joseba</a> &middot;
+			<a href="http://jardineriajoseba.com/" target="_blank" class="fn org url">Jardinería Joseba</a> &middot;
 			<!--a href="https://maps.google.com/maps?view=map&amp;cid=1877400621671427597&amp;q=Jardinería Joseba" class="adr"-->
 			<a href="https://maps.google.com/maps?q=ttarrattenea+4+++Hondarribia+20280&hl=es&ie=UTF8&ll=43.366966,-1.800299&spn=0.004711,0.011362&sll=59.916924,10.760872&sspn=0.004044,0.022724&t=h&hnear=Ttarrattenea+Kalea,+4,+20280+Hondarribia,+Gipuzkoa,+Espa%C3%B1a&z=17" target="_blank" class="adr">
 				<span class="street-address">Ttarrattenea Kalea 4</span> &middot;
 				<span class="postal-code">20280</span> <span class="locality">Hondarribia</span> &middot;
 				<span class="country-name">Spain</span>
 			</a><br>
-			<!--Org. no: 995 073 331 MVA-->
 		</p>
 
 		<p class="social">
-			<a href="http://www.pinterest.com/josebaolaskoaga/" title="@funkbit på Twitter" class="social-pinterest">Pinterest</a>
-			<a href="https://www.facebook.com/jardineria.joseba" title="Funkbit på Facebook" class="social-facebook">Facebook</a>
+			<a href="http://www.pinterest.com/josebaolaskoaga/" target="_blank" class="social-pinterest">Pinterest</a>
+			<a href="https://www.facebook.com/jardineria.joseba" target="_blank" class="social-facebook">Facebook</a>
 		</p>
 
 		<div class="clear"></div>
@@ -294,10 +308,5 @@
     .headroom--unpinned {top: -100px;}
     .headroom--pinned {top: 0;}
     </style>
-    <script  type="text/javascript"  src="js/headroom.min.js"></script>
-   <script  type="text/javascript"  src="js/jQuery.headroom.js"></script>
-    <script type="text/javascript">
-        $(".navbar-fixed-top").headroom();
-    </script>
 </body>
 </html>

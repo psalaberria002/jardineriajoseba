@@ -12,64 +12,13 @@
 	<link rel="stylesheet" href="css/main.css">
 
 	
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/holder.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js"></script>
-	<script  type="text/javascript"  src="js/headroom.min.js"></script>
-    <script  type="text/javascript"  src="js/jQuery.headroom.js"></script>
+	
 
     <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-	<!--Scroll to element event for navbar items-->
-	<script>
-	$(document).ready(function(){
-		$(".navbar-fixed-top").headroom({
-		  "tolerance": 5,
-		  "offset": 205,
-		  "classes": {
-		    "initial": "animated",
-		    "pinned": "swingInX",
-		    "unpinned": "swingOutX"
-		  }
-		});
-		
-	    $('.navbar-collapse').bind('click', 'ul li a', function(event) {
-	    	event.preventDefault();
-	    	//Hide collapse when item selected
-	    	$(".navbar-collapse").collapse('hide');
-	    	var top = $(document).scrollTop();
-	    	var newTop = $(event.target.hash).offset().top;
-
-	    	//When headroom non active
-	    	//scrolling down
-	    	if(top<newTop){
-	    		console.log('DOWN'+event.target.hash+' '+top+' '+newTop);
-	    		$.scrollTo(event.target.hash, 1000);
-	    	}
-	    	//scrolling up
-	    	else{
-	    		console.log('UP'+event.target.hash+' '+top+' '+newTop);
-	    		console.log((-1*$('#mynav').height())+1);
-	    		$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:(-1*$('.navbar-header').height())+1}});
-	    	}
-	    	//When headroom non active
-	        //$.scrollTo(event.target.hash, 1200, {offset:{left:0,top:-1*$('#mynav').height()}});
-	        
-	        //return false;
-	    });
-	    //Refresh scrollspy
-		// $('[data-spy="scroll"]').each(function () {
-		// 	var $spy = $(this).scrollspy('refresh');
-		// });
-	});
-	</script>
 	
-    <script type="text/javascript">
-        $(".navbar-fixed-top").headroom();
-    </script>
 
 	<!--Add google analitics script-->
 </head>
@@ -251,33 +200,16 @@
 		</h3>
 
 		<p class="company-about">
-			Funkbit is a nimble tech startup working riverside Akerselva in Oslo, Norway.
-			We love the Internet, and we care deeply about simplicity, purpose and honesty in whatever we make.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		</p>
 
-		<div class="persons">
-			<p class="person">
-				<img src="/media/images/persons/jon.png" alt="Jon">
-				<a href="mailto:jon&#64;funkbit.no"><strong>Jon Lønne</strong></a> (M.Sc.) Developer, music addict and hobby DJ.
-			</p>
+		<p class="person">
+				<img src="media/images/joseba.png" alt="Joseba">
+				<a href="mailto:joseba&#64;jardineriajoseba.com" target="_blank"><strong>Joseba Olaskoaga</strong></a>
+				<p>Jardinero, aficionado al ballet.<p>  
+		</p>
 
-			<p class="person">
-				<img src="/media/images/persons/christian.png" alt="Christian">
-				<a href="mailto:christian&#64;funkbit.no"><strong>Christian Mikalsen</strong></a> (M.Sc.) Developer, avid book reader and tech enthusiast.
-			</p>
-		</div>
-
-		<div class="persons">
-			<p class="person">
-				<img src="/media/images/persons/mats.png" alt="Mats">
-				<a href="mailto:mats&#64;funkbit.no"><strong>Mats Barlo</strong></a> (B.Sc.) Administrative guy and hobby chef.
-			</p>
-
-			<p class="person">
-				<img src="/media/images/persons/tommy.png" alt="Tommy">
-				<a href="mailto:tommy&#64;funkbit.no"><strong>Tommy Gudmundsen</strong></a> (M.Sc.) Developer, operations and human (or sometimes dancer).
-			</p>
-		</div>
+		
 
 		<div class="clear"></div>
 
@@ -313,5 +245,12 @@
 		<div class="clear"></div>
 
 	</footer>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/vendor/bootstrap.js"></script>
+	<script type="text/javascript" src="js/vendor/holder.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js"></script>
+	<script type="text/javascript"  src="js/main.js"></script>
+	
+    
 </body>
 </html>

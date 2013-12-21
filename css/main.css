@@ -106,6 +106,7 @@ b,strong {
 a {
     color: #FFF;
     text-decoration: none;
+    text-align: center;
 }
 
 a:hover,a:active {
@@ -193,6 +194,7 @@ section#photos {
     font-family: 'Futura Bold','FuturaBold','futura-pt','Helvetica Neue',Helvetica,sans-serif;
     position: relative;
     text-align: center;
+    /* padding: 5% 2%; */
 }
 
 section#photos nav {
@@ -252,6 +254,7 @@ section#photos p {
 
 section#photos div#project-dokus {
     background: #69B58A;
+    padding: 5% 2%;
 }
 
 section#photos div#project-dokus img {
@@ -312,9 +315,7 @@ section#photos div#project-splitabill p {
 }
 
 section#services {
-    max-width: 860px;
-    margin: 0 auto 8%;
-    padding: 0 5%;
+    padding: 5% 2%;
 }
 
 section#services p {
@@ -395,18 +396,14 @@ section#about p.company-about {
     padding: 0 4%;
 }
 
-section#about div.persons {
-    float: left;
-    margin: 0 auto;
-    max-width: 430px;
-}
-
 section#about p.person {
-    float: left;
-    height: 300px;
-    margin: 0 15px 0 0;
-    text-align: left;
+    /* float: none; */
+    /* height: 300px; */
+    /* margin: 0 15px 0 0; */
+    /* text-align: center; */
+    margin: 0 auto;
     width: 200px;
+    margin: 0 auto;
 }
 
 section#about p.person img {
@@ -519,10 +516,6 @@ section.text {
     header h2 {
         font-size: 4em;
         max-width: 560px;
-    }
-
-    section#about div.persons {
-        float: none;
     }
 }
 

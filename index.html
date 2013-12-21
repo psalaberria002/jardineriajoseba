@@ -11,9 +11,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
 
-	<!--[if lt IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/holder.js"></script>
@@ -21,10 +19,22 @@
 	<script  type="text/javascript"  src="js/headroom.min.js"></script>
     <script  type="text/javascript"  src="js/jQuery.headroom.js"></script>
 
+    <!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
 	<!--Scroll to element event for navbar items-->
 	<script>
 	$(document).ready(function(){
-		$(".navbar-fixed-top").headroom();
+		$(".navbar-fixed-top").headroom({
+		  "tolerance": 5,
+		  "offset": 205,
+		  "classes": {
+		    "initial": "animated",
+		    "pinned": "swingInX",
+		    "unpinned": "swingOutX"
+		  }
+		});
 		
 	    $('.navbar-collapse').bind('click', 'ul li a', function(event) {
 	    	event.preventDefault();
@@ -117,21 +127,21 @@
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner">
 	    <div class="item active">
-		  <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="..." style="display: block;margin-left: auto;margin-right: auto">
+		  <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="..." >
 		  <div class="carousel-caption">
 		    <h3>...</h3>
 		    <p>...</p>
 		  </div>
 		</div>
 	    <div class="item">
-		  <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="..." style="display: block;margin-left: auto;margin-right: auto">
+		  <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="..." >
 		  <div class="carousel-caption">
 		    <h3>...</h3>
 		    <p>...</p>
 		  </div>
 		</div>
 		<div class="item">
-		  <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="..." style="display: block;margin-left: auto;margin-right: auto">
+		  <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="..." >
 		  <div class="carousel-caption">
 		    <h3>...</h3>
 		    <p>...</p>
@@ -280,7 +290,7 @@
 		</h3>
 
 		<p class="contact">
-			<a href="mailto:jardineria_joseba&#64;hotmail.es" target="_blank" class="email">jardineria_joseba&#64;hotmail.es</a>
+			<a href="mailto:joseba&#64;jardineriajoseba.com" target="_blank" class="email">joseba&#64;jardineriajoseba.com</a>
 
 			<a href="tel:+34 689 915 410" class="tel">+34&nbsp;689&nbsp;915&nbsp;410</a>
 		</p>
@@ -303,11 +313,5 @@
 		<div class="clear"></div>
 
 	</footer>
-	<!-- HeadRoom  -->
-    <style type="text/css">
-    .headroom {position: fixed;top: 0;left: 0;right: 0;transition: all .6s ease-in-out;}
-    .headroom--unpinned {top: -100px;}
-    .headroom--pinned {top: 0;}
-    </style>
 </body>
 </html>

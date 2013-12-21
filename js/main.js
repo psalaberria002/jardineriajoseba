@@ -41,12 +41,12 @@ $(document).ready(function(){
 	    		console.log(newTop);
 	    		newTop-=$('.navbar-header').height();
 	    		//scrolling down
-	    		if(top<newTop){
+	    		if(top<newTop && (newTop-top)>1){
 	    			console.log('down');
 	    			$.scrollTo(event.target.hash, 1000);
 		    	}
 		    	//scrolling up
-		    	else if (top>newTop){
+		    	else if (top>newTop && (top-newTop)>1){
 		    		console.log('up');
 		    		$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:(-1*$('.navbar-header').height())}});
 		    	}

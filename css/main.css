@@ -218,7 +218,6 @@ section#photos div#project-dokus img:hover {
 
 section#photos div#project-dokus h4 {
     color: #FFF;
-    margin-top: -4%;
     text-shadow: 0 1px 2px #010101;
 }
 
@@ -269,7 +268,7 @@ section#photos div#project-splitabill p {
 
 section#services {
     max-width: 860px;
-    margin: 5% auto 8%;
+    margin: 0 auto 8%;
     padding: 0 5%;
 }
 

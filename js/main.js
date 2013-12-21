@@ -2,8 +2,11 @@ $(document).ready(function(){
 		var ismobile=navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i);
 		var headroomactive=false;
 
-		//Set headroom for non mobile browsers
-		if(!ismobile){
+		//Decide if headroom needs to be enabled or not
+		var enableHeadroom = (config.enableHeadroomDesktop && config.enableHeadroomMobile) || (config.enableHeadroomMobile && ismobile)  || (config.enableHeadroomDesktop && !ismobile);
+
+		//Enable Headroom
+		if(enableHeadroom){
 			$.getScript("js/vendor/headroom.min.js", function(){
 				$.getScript("js/vendor/jQuery.headroom.js", function(){
 					$(".navbar-fixed-top").headroom({
@@ -20,6 +23,7 @@ $(document).ready(function(){
 			});
 		}
 		
+		
 		//Add click event for nav bar items
 	    $('.navbar-collapse').bind('click', 'ul li a', function(event) {
 	    	event.preventDefault();
@@ -33,18 +37,24 @@ $(document).ready(function(){
 	    	if(headroomactive){
 	    		var top = $(document).scrollTop();
 	    		var newTop = $(event.target.hash).offset().top;
+	    		console.log(top);
+	    		console.log(newTop);
+	    		newTop-=$('.navbar-header').height();
 	    		//scrolling down
 	    		if(top<newTop){
+	    			console.log('down');
 	    			$.scrollTo(event.target.hash, 1000);
 		    	}
 		    	//scrolling up
-		    	else{
-		    		$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:(-1*$('.navbar-header').height())+1}});
+		    	else if (top>newTop){
+		    		console.log('up');
+		    		$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:(-1*$('.navbar-header').height())}});
 		    	}
+
 	    	}
 	    	//When headroom non active
 	    	else{
-	    		$.scrollTo(event.target.hash, 1200, {offset:{left:0,top:(-1*$('.navbar-header').height())+1}});
+	    		$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:(-1*$('.navbar-header').height())}});
 	    	}
 	        
 	    });
@@ -52,7 +62,10 @@ $(document).ready(function(){
 	    //Add click event for navbar brand item
 	    $('.navbar-brand').bind('click', function(event){
 	    	event.preventDefault();
-	    	$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:(-1*$('.navbar-header').height())+1}});
+	    	var top = $(document).scrollTop();
+	    	if(top!==0){
+	    		$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:(-1*$('.navbar-header').height())}});
+	    	}
 	    });
 });
 
@@ -63,5 +76,5 @@ $(window).resize(function()
 {
     clearTimeout(fid);
     //Refresh scrollspy
-    id = setTimeout(function(){$('[data-spy="scroll"]').each(function () {console.log('refresh');var $spy = $(this).scrollspy('refresh')})}, 500);
+    fid = setTimeout(function(){$('[data-spy="scroll"]').each(function () {console.log('refresh');var $spy = $(this).scrollspy('refresh')})}, 500);
 });

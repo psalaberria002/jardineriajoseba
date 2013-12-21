@@ -120,6 +120,7 @@ header {
     background-size: cover;
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../media/images/header.jpg',sizingMethod='scale')";
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../media/images/header.jpg',sizingMethod='scale');
+    margin-top:50px;
 }
 
 header h1 {

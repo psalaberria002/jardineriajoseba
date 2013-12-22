@@ -1,5 +1,13 @@
+var ismobile=navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i);
+//Snowfall
+if(!ismobile && config.enableSnowfall){
+	$.getScript("js/vendor/jquery.snow.min.js", function(){
+		$.fn.snow({ minSize: 5, maxSize: 50, newOn: 600, flakeColor: '#ffffff' });
+	});
+}
+
 $(document).ready(function(){
-		var ismobile=navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i);
+
 		var headroomactive=false;
 
 		//Decide if headroom needs to be enabled or not

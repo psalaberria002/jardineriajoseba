@@ -5,5 +5,10 @@ var config = {
     * 
     */    
     enableHeadroomDesktop: true,   
-    enableHeadroomMobile : false
+    enableHeadroomMobile : false,
+
+    /*
+    * Season dependent falls
+    */
+    enableSnowfall: true
 }

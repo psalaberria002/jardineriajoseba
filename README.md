@@ -25,5 +25,12 @@ npm install
 grunt
 ```
 
+
+
+## Running in localhost
+```
+cd jardineriajoseba/app
+./simpleserver.sh
+```
 As a convenience, you can use `grunt watch` to build automatically when
 you update files.

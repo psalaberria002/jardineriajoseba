@@ -67,8 +67,8 @@ $(document).ready(function(){
 	        
 	    });
 
-	    //Add click event for navbar brand item
-	    $('.navbar-brand').bind('click', function(event){
+	    //Add click event for navbar brand item. And the company url link.
+	    $('.navbar-brand , .fn.org.url').bind('click', function(event){
 	    	event.preventDefault();
 	    	var top = $(document).scrollTop();
 	    	if(top!==0){
@@ -76,6 +76,8 @@ $(document).ready(function(){
 	    	}
 	    });
 });
+
+
 
 
 //Window resize event is called many times in some browsers. This is a workaround for calling a function just once, instead of many times.

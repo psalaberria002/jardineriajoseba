@@ -10,5 +10,5 @@ var config = {
     /*
     * Season dependent falls
     */
-    enableSnowfall: true
+    enableSnowfall: false
 }

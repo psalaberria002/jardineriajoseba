@@ -1,13 +1,13 @@
 .navbar-default {
-    background-color: #5a7d5c;
-    border-color: #c98096;
+    background-color: #674677;
+    border-color: #674677;
 }
 .navbar-default .navbar-brand {
     color: #ecf0f1;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: #a5cac2;
+    color: #008d1c;
 }
 .navbar-default .navbar-nav > li:hover {
     /*background-color: #E4C0CA;*/
@@ -17,13 +17,13 @@
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #a5cac2;
+    color: #008d1c;
 }
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:hover, 
 .navbar-default .navbar-nav > .active > a:focus {
-    color: #a5cac2;
-    background-color: #c98096;
+    color: #000000;
+    # background-color: #439757;
 }
 .navbar-default .navbar-nav > .open > a, 
 .navbar-default .navbar-nav > .open > a:hover, 

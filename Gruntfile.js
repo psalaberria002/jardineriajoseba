@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         //pkg: grunt.file.readJSON("package.json"),
         
         clean: {
-            build: ["app/js/all_body.min.js","app/css/all_app.min.css","app/css/all_app.css"]
+            build: ["app/js/all_body.min.js","app/css/all_app.min.css"]
         },
         
         // Lint the Javascript, exclude the vendor folder
@@ -73,13 +73,8 @@ module.exports = function(grunt) {
         cssmin: {
             combine: {
               files: {
-                'app/css/all_app.css': ['app/css/main.css', 'app/css/navbar.css']
+                'app/css/all_app.min.css': ['app/css/bootstrap-3.0.3.css','app/css/main.css', 'app/css/navbar.css']
               }
-            },
-            minify: {
-                files: {
-                    "app/css/all_app.min.css": ["app/css/all_app.css"]
-                }
             }
         },
         
@@ -87,8 +82,7 @@ module.exports = function(grunt) {
             css: {
                 files: [
                     "app/css/*.css",
-                    "!app/css/all_app.min.css",
-                    "!app/css/all_app.css"
+                    "!app/css/all_app.min.css"
                 ],
                 tasks: ["cssmin"],
                 options: {

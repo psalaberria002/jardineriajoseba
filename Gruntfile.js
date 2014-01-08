@@ -73,7 +73,7 @@ module.exports = function(grunt) {
         cssmin: {
             combine: {
               files: {
-                'app/css/all_app.min.css': ['app/css/bootstrap-3.0.3.css','app/css/main.css', 'app/css/navbar.css']
+                'app/css/all_app.min.css': ['app/css/bootstrap-3.0.3.css','app/css/main.css', 'app/css/navbar.css','app/css/colors.css']
               }
             }
         },

@@ -120,19 +120,6 @@
 .black {
   color: #111111; }
 
-/* PRETTIER LINKS */
-a {
-  text-decoration: none;  }
 
-a:link {
-  color: #0074d9; }
-
-a:visited {
-  color: #b10dc9; }
-
-a:hover {
-  color: #7fdbff;
-  -webkit-transition: color .3s ease-in-out;
-  transition: color .3s ease-in-out; }
 
 

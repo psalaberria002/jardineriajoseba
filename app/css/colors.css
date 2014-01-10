@@ -122,14 +122,10 @@
 
 /* PRETTIER LINKS */
 a {
-  text-decoration: none;
-  -webkit-transition: color .3s ease-in-out;
-  transition: color .3s ease-in-out; }
+  text-decoration: none;  }
 
 a:link {
-  color: #0074d9;
-  -webkit-transition: color .3s ease-in-out;
-  transition: color .3s ease-in-out; }
+  color: #0074d9; }
 
 a:visited {
   color: #b10dc9; }
@@ -139,7 +135,4 @@ a:hover {
   -webkit-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out; }
 
-a:active {
-  color: #ff851b;
-  -webkit-transition: color .3s ease-in-out;
-  transition: color .3s ease-in-out; }
+

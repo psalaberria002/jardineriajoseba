@@ -34,7 +34,7 @@ module.exports = function(grunt) {
                     console: false,
                     document: false,
                     setTimeout: false,
-                    
+                    config: true,
                     // Grunt globals
                     module: false,
                     
@@ -140,6 +140,21 @@ module.exports = function(grunt) {
                 dest: '/public_html/test',
                 exclusions: ['app/**/.DS_Store', 'app/**/Thumbs.db']
             }
+        },
+        ftpush: {
+            build: {
+                auth: {
+                    host: 'jardineriajoseba.tuars.com',
+                    port: 21,
+                    authKey: 'key1'
+                },
+                src: 'app/dist',
+                dest: '/public_html/test',
+                exclusions: ['app/**/.DS_Store', 'app/**/Thumbs.db'],
+                keep: [],
+                simple: false,
+                useList: false
+            }
         }
     });
 
@@ -154,13 +169,17 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-watch");
 
     grunt.loadNpmTasks('grunt-ftp-deploy');
+    grunt.loadNpmTasks('grunt-ftpush');
 
     // TASKS
     
     // Use this during development
     grunt.registerTask("default", ["clean:build", "uglify", "cssmin", "copy"]);
 
-    grunt.registerTask("deploy", ["default","ftp-deploy"]);
+    
+    //Deploy to server. 
+    grunt.registerTask("deploy", ["default","ftpush"]);
+    //grunt.registerTask("deploy", ["default","ftp-deploy"]);
 
     // Use this to jshint all files
     // grunt jshint

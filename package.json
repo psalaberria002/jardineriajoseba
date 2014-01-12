@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/psalaberria002/jardineriajoseba"
+    "url": "git://github.com/psalaberria002/jardineriajoseba.git"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -14,6 +14,8 @@
     "grunt-contrib-cssmin": "~0.6.1",
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-ftp-deploy": "~0.1.1",
-    "grunt-contrib-copy": "~0.5.0"
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-ftpush": "~0.3.3",
+    "grunt-uncss": "~0.1.6"
   }
 }

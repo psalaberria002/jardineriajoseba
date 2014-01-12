@@ -33,48 +33,47 @@ $(document).ready(function(){
 		
 		
 		//Add click event for nav bar items
-	    $('.navbar-collapse').bind('click', 'ul li a', function(event) {
-	    	event.preventDefault();
-	 		//When the collape is open, the class 'in' is set 
-	    	if($(this).hasClass('in')){
-	    		//Hide collapse when item selected
-	    	    $(".navbar-collapse").collapse('hide');
-	    	}
+		$('.navbar-collapse').bind('click', 'ul li a', function(event) {
+			event.preventDefault();
+			//When the collape is open, the class 'in' is set 
+			if($(this).hasClass('in')){
+				//Hide collapse when item selected
+				$(".navbar-collapse").collapse('hide');
+			}
 
-	    	//When headroom active
-	    	if(headroomactive){
-	    		var top = $(document).scrollTop();
-	    		var newTop = $(event.target.hash).offset().top;
-	    		console.log(top);
-	    		console.log(newTop);
-	    		newTop-=$('.navbar-header').height();
-	    		//scrolling down
-	    		if(top<newTop && (newTop-top)>1){
-	    			console.log('down');
-	    			$.scrollTo(event.target.hash, 1000);
-		    	}
-		    	//scrolling up
-		    	else if (top>newTop && (top-newTop)>1){
-		    		console.log('up');
-		    		$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:(-1*$('.navbar-header').height())}});
-		    	}
+			//When headroom active
+			if(headroomactive){
+				var top = $(document).scrollTop();
+				var newTop = $(event.target.hash).offset().top;
+				console.log(top);
+				console.log(newTop);
+				newTop-=$('.navbar-header').height();
+				//scrolling down
+				if(top<newTop && (newTop-top)>1){
+					console.log('down');
+					$.scrollTo(event.target.hash, 1000);
+				}
+				//scrolling up
+				else if (top>newTop && (top-newTop)>1){
+					console.log('up');
+					$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:(-1*$('.navbar-header').height())}});
+				}
 
-	    	}
-	    	//When headroom non active
-	    	else{
-	    		$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:(-1*$('.navbar-header').height())}});
-	    	}
-	        
-	    });
+			}
+			//When headroom non active
+			else{
+				$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:(-1*$('.navbar-header').height())}});
+			}
+		});
 
-	    //Add click event for navbar brand item. And the company url link.
-	    $('.navbar-brand , .fn.org.url').bind('click', function(event){
-	    	event.preventDefault();
-	    	var top = $(document).scrollTop();
-	    	if(top!==0){
-	    		$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:(-1*$('.navbar-header').height())}});
-	    	}
-	    });
+		//Add click event for navbar brand item. And the company url link.
+		$('.navbar-brand , .fn.org.url').bind('click', function(event){
+			event.preventDefault();
+			var top = $(document).scrollTop();
+			if(top!==0){
+				$.scrollTo(event.target.hash, 1000, {offset:{left:0,top:(-1*$('.navbar-header').height())}});
+			}
+		});
 });
 
 
@@ -84,7 +83,12 @@ $(document).ready(function(){
 var fid; 
 $(window).resize(function() 
 {
-    clearTimeout(fid);
-    //Refresh scrollspy
-    fid = setTimeout(function(){$('[data-spy="scroll"]').each(function () {console.log('refresh');var $spy = $(this).scrollspy('refresh')})}, 500);
+	clearTimeout(fid);
+	//Refresh scrollspy
+	fid = setTimeout(function(){
+		$('[data-spy="scroll"]').each(function () {
+			console.log('refresh');
+			var $spy = $(this).scrollspy('refresh');
+		}
+	);}, 500);
 });

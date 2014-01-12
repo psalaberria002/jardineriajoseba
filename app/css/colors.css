@@ -68,6 +68,22 @@
 .bg-black {
   background-color: #111111; }
 
+.bg-azul-bonito {
+  background-color: rgb(94, 173, 234);
+}
+
+.bg-como-morado {
+  background-color: rgb(61, 80, 160);
+}
+
+.bg-verde-hierba {
+  background-color: rgb(116, 160, 67)
+}
+
+.bg-azul-grisaceo {
+  background-color: rgb(80, 110, 113)
+}
+
 /* Colors */
 .navy {
   color: #001f3f; }
@@ -120,6 +136,18 @@
 .black {
   color: #111111; }
 
+.azul-bonito {
+  color: rgb(94, 173, 234);
+}
 
+.como-morado {
+  color: rgb(61, 80, 160);
+}
 
+.verde-hierba {
+  color: rgb(116, 160, 67)
+}
 
+.azul-grisaceo {
+  color: rgb(80, 110, 113)
+}

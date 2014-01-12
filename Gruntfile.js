@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         //pkg: grunt.file.readJSON("package.json"),
         
         clean: {
-            build: ["app/js/all_body.min.js","app/css/all_app.min.css"]
+            build: ["app/dist"]
         },
         
         // Lint the Javascript, exclude the vendor folder
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
             },
             body_js: {
                 files: {
-                    "app/js/all_body.min.js": [
+                    "app/dist/js/all_body.min.js": [
                         "app/js/vendor/bootstrap.min.js",
                         "app/js/vendor/holder.js",
                         "app/js/config.js",
@@ -66,14 +66,29 @@ module.exports = function(grunt) {
             }
         },
        
-        
+        copy: {
+            main: {
+                files: [
+
+                    // copy vendor js files, excluding already compiled ones.
+                    {expand: true, cwd:'app/', dest:'app/dist/', src: ['js/vendor/*','!js/vendor/holder.js','!js/vendor/bootstrap.min.js'], filter: 'isFile'},
+
+                    // copy all html files
+                    {expand: true, cwd:'app/', dest:'app/dist/', src: ['*.html','.htaccess'], filter: 'isFile'},
+
+                    // copy necessary folders
+                    {expand: true, cwd:'app/', dest:'app/dist/', src: ['fonts/**','media/**'], filter: 'isFile'},
+
+                ]
+            }
+        },
         
         
         // Compress CSS
         cssmin: {
             combine: {
               files: {
-                'app/css/all_app.min.css': ['app/css/bootstrap-3.0.3.css','app/css/main.css', 'app/css/navbar.css','app/css/colors.css']
+                'app/dist/css/all_app.min.css': ['app/css/bootstrap-3.0.3.css','app/css/main.css', 'app/css/navbar.css','app/css/colors.css']
               }
             }
         },
@@ -112,6 +127,19 @@ module.exports = function(grunt) {
                     livereload: true
                 }
             }
+        },
+
+        'ftp-deploy': {
+            build: {
+                auth: {
+                    host: 'jardineriajoseba.tuars.com',
+                    port: 21,
+                    authKey: 'key1'
+                },
+                src: 'app/dist',
+                dest: '/public_html/test',
+                exclusions: ['app/**/.DS_Store', 'app/**/Thumbs.db']
+            }
         }
     });
 
@@ -119,18 +147,20 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     
     grunt.loadNpmTasks("grunt-contrib-watch");
 
+    grunt.loadNpmTasks('grunt-ftp-deploy');
+
     // TASKS
     
     // Use this during development
-    grunt.registerTask("default", ["clean:build", "uglify", "cssmin"]);
-    
-    // Use this when deploying
-    grunt.registerTask("build", ["default"]);
+    grunt.registerTask("default", ["clean:build", "uglify", "cssmin", "copy"]);
+
+    grunt.registerTask("deploy", ["default","ftp-deploy"]);
 
     // Use this to jshint all files
     // grunt jshint

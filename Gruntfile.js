@@ -174,11 +174,11 @@ module.exports = function(grunt) {
     // TASKS
     
     // Use this during development
-    grunt.registerTask("default", ["clean:build", "uglify", "cssmin", "copy"]);
+    grunt.registerTask("default", [ "uglify", "cssmin", "copy"]);
 
     
     //Deploy to server. 
-    grunt.registerTask("deploy", ["default","ftpush"]);
+    grunt.registerTask("deploy", ["clean", "default","ftpush"]);
     //grunt.registerTask("deploy", ["default","ftp-deploy"]);
 
     // Use this to jshint all files

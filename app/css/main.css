@@ -142,6 +142,11 @@ header h2 {
     margin: 0 auto;
     max-width: 860px;
     text-align: right;
+    text-shadow:1px 1px 8px #000;
+   -moz-text-shadow:1px 1px 8px #000;
+   -ms-text-shadow:1px 1px 8px #000;
+   -o-text-shadow:1px 1px 8px #000;
+   -webkit-text-shadow:1px 1px 8px #000;
 }
 
 /*Headroom*/

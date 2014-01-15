@@ -24,7 +24,8 @@ npm install
 # Compress JS, compress CSS. 
 grunt
 ```
-
+As a convenience, you can use `grunt watch` to build automatically when
+you update files.
 
 
 ## Running in localhost
@@ -32,5 +33,8 @@ grunt
 cd jardineriajoseba/app
 ./simpleserver.sh
 ```
-As a convenience, you can use `grunt watch` to build automatically when
-you update files.
+
+## Deploying app
+```
+grunt deploy
+```

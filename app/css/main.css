@@ -201,16 +201,9 @@ section#photos {
     /* padding: 5% 2%; */
 }
 
-section#photos nav {
-    left: 45%;
-    position: absolute;
-    bottom: 30%;
-    z-index: 300;
-}
-
 section#photos div.project {
     margin: 0 auto;
-    padding: 0 0 1%;
+    padding: 5% 2%;
 }
 
 section#photos div.project a {
@@ -242,11 +235,10 @@ section#photos p {
 
 section#photos div#project-one {
     background: #69B58A;
-    padding: 5% 2%;
 }
 
 section#photos div#project-one img {
-    max-width: 900px;
+    margin: -2% 0 2%;
 }
 
 section#photos div#project-one img:hover {
@@ -264,19 +256,14 @@ section#photos div#project-one p {
 
 section#photos div#project-two {
     background: #F2F2F2;
-    margin: 0 auto;
 }
 
 section#photos div#project-two img {
-    /* margin: -2% 0 2%; */
-    max-width: 747px;
-    margin: 0 auto;
-    padding-top:  5%;
+    margin: -2% 0 2%;
 }
 
 section#photos div#project-two h4 {
     color: #010101;
-    margin-top: -3%;
     text-shadow: 0 1px 1px #E3E3E3;
 }
 
@@ -291,12 +278,10 @@ section#photos div#project-three {
 
 section#photos div#project-three img {
     margin: -2% 0 2%;
-    max-width: 375px;
 }
 
 section#photos div#project-three h4 {
     color: #010101;
-    margin-top: -4%;
     text-shadow: 0 1px 1px #999;
 }
 

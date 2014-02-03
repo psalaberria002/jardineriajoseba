@@ -154,6 +154,19 @@ module.exports = function(grunt) {
                 keep: [],
                 simple: false,
                 useList: false
+            },
+            pi: {
+                auth: {
+                    host: 'fantoft.zapto.org',
+                    port: 21,
+                    authKey: 'key2'
+                },
+                src: 'app/dist',
+                dest: '/var/www/jardineriajoseba',
+                exclusions: ['app/**/.DS_Store', 'app/**/Thumbs.db'],
+                keep: [],
+                simple: false,
+                useList: false
             }
         }
     });
@@ -178,8 +191,8 @@ module.exports = function(grunt) {
 
     
     //Deploy to server. 
-    grunt.registerTask("deploy", ["clean", "default","ftpush"]);
-    //grunt.registerTask("deploy", ["default","ftp-deploy"]);
+    grunt.registerTask("deploy", ["clean", "default","ftpush:build"]);
+    grunt.registerTask("deploypi", ["clean","default","ftpush:pi"]);
 
     // Use this to jshint all files
     // grunt jshint

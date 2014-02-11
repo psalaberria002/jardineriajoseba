@@ -435,9 +435,7 @@ section.text {
     }
 
     header h1 {
-        height: auto;
         padding: 2%;
-        width: auto;
     }
 
     header h1 img {

@@ -272,41 +272,10 @@ section#photos div#project-two p {
     text-shadow: 0 1px 1px #E3E3E3;
 }
 
-section#photos div#project-three {
-    background: #6990AC;
-}
-
-section#photos div#project-three img {
-    margin: -2% 0 2%;
-}
-
-section#photos div#project-three h4 {
-    color: #010101;
-    text-shadow: 0 1px 1px #999;
-}
-
-section#photos div#project-three p {
-    color: #FFF;
-    text-shadow: 0 1px 1px #010101;
-}
-
-section#services {
-    padding: 5% 2%;
-}
-
-section#services p {
-    font-size: 1.2em;
-    text-align: center;
-}
-
-section#services h4:not(:first-child) {
-    margin-top: 5%;
-}
-
 section#about {
     margin: 0 auto;
     max-width: 860px;
-    padding: 0 2%;
+    padding: 5% 2%;
     text-align: center;
 }
 
@@ -334,13 +303,14 @@ section#about p.person img {
     height: 200px;
     margin-bottom: 10px;
     width: 100%;
+    border-radius: 100%;
 }
 
 footer {
     background-color: #000;
     color: #DFD3D3;
     text-align: center;
-    margin: 5% 0 0 0;
+    margin: 0 0 0 0;
     padding: 5% 2%;
 }
 
@@ -409,6 +379,36 @@ footer p.social a:hover {
     clear: both;
 }
 
+/* MARKETING CONTENT
+-------------------------------------------------- */
+section#marketing {
+    background: #6990AC;
+}
+/* Pad the edges of the mobile views a bit */
+.marketing {
+    
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+  margin-top: 20px;
+    margin-bottom: 10px;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+  color:#333;
+}
+
+
 section.text {
     color: #F5F5F5;
     font-size: 1.2em;
@@ -449,10 +449,6 @@ section.text {
 
     section#photos h4 {
         font-size: 2em;
-    }
-
-    section#photos div#project-three img {
-        max-width: 231px;
     }
 
     section#services ul {

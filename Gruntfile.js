@@ -123,6 +123,7 @@ module.exports = function(grunt) {
                     "app/media/images/*",
                     "app/media/images/carousel/*"
                 ],
+                tasks: ["copy:main"],
                 options: {
                     livereload: true
                 }

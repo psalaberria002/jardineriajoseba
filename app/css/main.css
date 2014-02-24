@@ -255,7 +255,8 @@ section#photos div#project-one p {
 }
 
 section#photos div#project-two {
-    background: #F2F2F2;
+    background: #69B58A;
+    background-image: url('../media/images/white-wood.jpg');
 }
 
 section#photos div#project-two img {

@@ -17,3 +17,4 @@ Icon
 .Trashes
 *.sublime-project
 *.sublime-workspace
+secret.json

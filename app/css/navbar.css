@@ -8,10 +8,10 @@
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
 }
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
+.navbar-default .navbar-brand:hover{
     color: #008d1c;
 }
+
 .navbar-default .navbar-nav > li {
     height: 50px;
 }
@@ -21,13 +21,12 @@
     -webkit-transition: color .3s ease-out,text-shadow 0.3s ease-out;
     transition: color .3s ease-out,text-shadow 0.3s ease-out;
 }
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li > a:hover{
     color: #008d1c;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 .navbar-default .navbar-nav > li > a:focus {
-    color: #008d1c;
+    background: transparent;
 }
 
 .navbar-default .navbar-nav > .active > a, 

@@ -155,20 +155,26 @@ module.exports = function(grunt) {
                 keep: [],
                 simple: false,
                 useList: false
-            },
-            pi: {
-                auth: {
-                    host: 'fantoft.zapto.org',
-                    port: 21,
-                    authKey: 'key2'
-                },
-                src: 'app/dist',
-                dest: '/var/www/jardineriajoseba',
-                exclusions: ['app/**/.DS_Store', 'app/**/Thumbs.db'],
-                keep: [],
-                simple: false,
-                useList: false
             }
+        },
+        // don't keep passwords in source control
+        secret: grunt.file.readJSON('secret.json'),
+        sftp: {
+          'deploy-pi': {
+            files: {
+              "./": "app/dist/**"
+            },
+            options: {
+              path: '/var/www/jardineriajoseba.com/public_html',
+              host: '<%= secret.host %>',
+              username: '<%= secret.username %>',
+              password: '<%= secret.password %>',
+              showProgress: true,
+              srcBasePath: "app/dist/",
+              createDirectories: true,
+              exclusions: ['app/**/.DS_Store', 'app/**/Thumbs.db'],
+            }
+          }
         }
     });
 
@@ -185,6 +191,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-ftp-deploy');
     grunt.loadNpmTasks('grunt-ftpush');
 
+    grunt.loadNpmTasks('grunt-ssh');
+
     // TASKS
     
     // Use this during development
@@ -192,8 +200,9 @@ module.exports = function(grunt) {
 
     
     //Deploy to server. 
-    grunt.registerTask("deploy", ["clean", "default","ftpush:build"]);
-    grunt.registerTask("deploypi", ["clean","default","ftpush:pi"]);
+    grunt.registerTask("deploy-ftp", ["clean", "default","ftpush:build"]);
+    grunt.registerTask("deploy-pi", ["clean", "default","sftp:deploy-pi"]);
+    grunt.registerTask("deploy", ["clean", "default","ftpush:build","sftp:deploy-pi"]);
 
     // Use this to jshint all files
     // grunt jshint
